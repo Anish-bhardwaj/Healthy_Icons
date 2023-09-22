@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+html{
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  padding-bottom: 0px;
+  background-color: rgb(251, 235, 213);
+  overflow: hidden;
+}
+
+#login{
+  display: none;
+  margin-left: 50px; 
+  text-decoration: none; 
+  color: white;
+  text-transform: capitalize;  
+}
+#login:hover{
+  color: red;
+}
+#login img{
+  height: 25px;
+  width: 25px;
+  margin: 0px 5px -8px 3px;
+}
+
+#text-nav{
+  margin: 0px 10px 0px 0px;
+  color: rgb(218, 150, 184);
+
+  font-size: 25px;
+}
+.logo{
+  font-size: 25px;
+  margin: 0px 12px 4px 4px;
+  font-weight: bolder;
+  
+  }
+  .logo a{
+      text-decoration: none;
+      color: white;
+  }
+  .logo a img{
+    height: 40px;
+    width: 40px;
+    margin: -14px 9px -9px 7px; 
+  
+  
+  }
+.header{
+  padding: 0.5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ background-color: rgb(33, 33, 33);
+ position: fixed;
+ width: 100%;
+ z-index: 99999;
+}
+.header.active-header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.header.active-header a {
+  color: #000;
+}
+
+.header.active-header .container {
+  padding: 10px 0;
+}
+
+.logo{
+font-size: 25px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+color: rgb(255, 255, 255);
+}
+.navbar-lists{
+  display: flex;
+  gap: 25px;
+  
+}
+ul li{
+  list-style: none;
+}
+.navbar-links{
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.navbar-links:hover,.current{
+  color: #c0392b !important;
+}
+.mobile-navbar-btn{
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile-navbar-icon{
+  width: 3.5rem;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(33, 33, 33);
+border-radius: 10px;
+}
+.mobile-navbar-icon[name="close-outline"]{
+display: none;
+}
+
+
+/* -=-==-=-=-=-=-=-second
+ */
+
+main{
+    background-color: antiquewhite;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  padding-bottom: 0px;
+  background-color: rgb(251, 235, 213);
+}
+#Container{
+ width: 101%;
+ height: 350px;
+ border-radius: 4px;
+ background-color: antiquewhite;
+ margin-top: 75px;
+
+}
+#mainsection1{
+    height:350px;
+    width:33%;
+}
+#mainsection2{
+    height:350px;
+    width:33%;
+}
+#mainsection3{
+    height:350px;
+    width:33%;
+}
+#effect{
+  background-color: antiquewhite;
+
+}
+div , section {
+    display: inline-block;
+}
+img{
+    height: 297px;
+    width: 100% ;
+}
+.bgimages{
+  width: 100%;
+}
+a>h2{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+
+    
+h1{
+    padding-left: 10px;
+}
+h3{padding-left: 14px;}
+.infosmoke{
+    height: 1000px;
+    width:100%;
+    background-image: url('/Images/Backgroundimages1.jpg');
+    background-size: cover;
+    
+
+}
+.infodrink{
+    height: 1000px;
+    width:100%;
+    background-image: url('/Images/Backgroundimages2.jpg');
+    background-size: cover;
+    
+
+}
+.infodrugs{
+    height: 1000px;
+    width:100%;
+    background-image: url('/Images/Backgroundimages3.jpg');
+    background-size: cover;
+    
+
+}
+/* Style for a basic button */
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+  
+  .button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-64:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-64 {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
+  /*Carousel effect*/
+  img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel {
+    position: absolute;
+    left: 30%;
+    background-color: antiquewhite;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 530px;
+    width: 500px;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    background-color: rebeccapurple;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.5%;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  .bottom{
+    background-color: #222;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .down1{
+    margin: 2px 0px 0px 40px;
+  }
+  
+  .downp{
+    margin-top: 20px;
+  }
+   a{
+    color: white;
+  }
+   .downp p{
+    color: white;
+  }
+  .down1 img{
+    height: auto;
+    width: auto;
+  }
+  .down3 img{
+    height: 300px;
+    width: 460px;
+  }
+  a:hover{
+    color:#c0392b !important;
+    }
+    
+
+
+  /* -=--==-=-=-=-=-
+   */
+   /* =======media queries=========
+====================================== */
+@media screen and (max-width: 1170px){
+  #text{
+   font-size: 18px;
+   }
+ }
+
+ @media (max-width: 1140px){
+  #text {
+      font-size: 22px;
+    }
+    .logo {
+    font-size: 23px;
+    }
+
+}
+
+@media screen and (max-width: 1130px){
+  .logo{
+   font-size: 22px;
+  }
+  }
+
+@media screen and (max-width: 1115px){   
+      #login {
+        margin-left: 0px;
+      }
+      }
+
+@media (max-width: 1100px){
+          #text{
+              font-size: 20px;
+          }
+          .logo{
+              font-size: 20px;
+           }
+           #login {
+              margin-left: 0px;
+            }
+          }
+
+@media screen and (max-width: 1060px){
+              .logo{
+                font-size: 18px;
+               }
+               .logo a img {
+                height: 30px;
+                width: 30px;
+                margin: -7px 7px -8px -6px;
+              }
+              
+      .options li{
+        margin: 0px 0px 0px 6px;
+        font-size: 14px;
+      }
+      #text{
+        font-size: 16px;
+        }
+            }
+
+@media (max-width: 1030px){
+              #text {
+                  font-size: 20px;
+                }
+                .navbar-links {
+                  font-size: 14px;
+                }
+          }
+
+@media (max-width: 980px){
+              .navbar-links{
+                  color: black;
+              
+              }
+               .navbar{
+                  width: 100%;
+                  height: 100vh;
+                  background: linear-gradient(to bottom, rgb(251, 235, 213),#f0bdf2);
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  transform: translateX(100%);
+                  transition: all 0.5s;
+                  opacity: 0;
+                  visibility: hidden;
+               }
+               .navbar-lists{
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 40px;
+                  margin: 0px;
+               }
+               .mobile-navbar-btn{
+                  display: block;
+                  z-index: 999;
+               }   
+               .active .navbar{
+                  transform: translateX(0); 
+                  opacity: 1;
+                  visibility: visible;
+               }
+               .active .mobile-navbar-btn
+               .mobile-navbar-icon[name="reorder-three-outline"]{
+                  display: none;
+               }
+               .active .mobile-navbar-btn
+               .mobile-navbar-icon[name="close-outline"]{
+                  display: block;
+               }
+               #login {
+                  margin-left: 0px;
+                  color: black;
+                  font-weight: 500;
+                }
+                #smoking,.infosmoke{
+                  height: 1140px;
+
+                }
+                .infodrink,#drinking{
+                  height: 1265px;
+                }
+                .infodrugs,#drugs{
+                  height: 1210px;
+                }
+              }
+
+@media (max-width: 820px){
+                  #container{
+                    width: 100%;
+                  }
+                  #mainsection1,#mainsection2,#mainsection3{
+                    width:32%
+                  }
+                  .carousel{
+                    left: 12%;
+                  }
+                  #smoking,.infosmoke{
+                    height: 1300px;
+  
+                  }
+                  .infodrink,#drinking{
+                    height: 1510px;
+                  }
+                  .infodrugs,#drugs{
+                    height: 1410px;
+                  }
+
+                  /* --footer section  -- */
+                  .down3 img {
+                    height: 183px;
+                    width: 206px;
+                  }
+                  .down1{
+                    margin: 2px 0px 0px 4px;
+                  }
+                  .down1 img{
+                    width: 40%;
+                    height: 40%;
+                  }
+                }
+
+@media (max-width: 660px){
+                  .logo{
+                     font-size: 20px;
+                  }
+                  #text{
+                      font-size: 20px;
+                  }
+                  .carousel{
+                    left: 0%;
+                    
+                  }
+                  #smoking,.infosmoke{
+                    height: 1600px;
+  
+                  }
+                  .infodrink,#drinking{
+                    height: 2140px;
+                  }
+                  .infodrugs,#drugs{
+                    height: 2085px;
+                  }
+
+                  .infosmoke{
+                    background-image: url('/Images/Backgroundimages1responsive.jpg');
+                  }
+                  .infodrink{
+                    background-image: url('/Images/Backgroundimages2responsive.jpg');
+
+                  }
+                  /* footer-section */
+                  .down1 h2 {
+                    font-size: 12px;
+                  }
+                  .down1 h4{
+                      font-size: 12px;
+                  }
+                  .down1 p{
+                      font-size: 12px;   
+                  }
+                  
+              } 
+
+@media (max-width: 500px){
+                  .logo a img {
+                      height: 25px;
+                      width: 25px;
+                      margin: 5px 5px -5px 1px;
+                    }
+                    
+          
+                    /* ---footer--section--- */
+                    .bottom {
+                      height: 200px;
+                    }
+                    .down3 img {
+                      height: 140px;
+                      width: 140px;
+                    }
+                    .down1 img {
+                      width: 20%;
+                    }
+                    .carousel{
+                      height: 430px;
+                      width: 470px;
+                    }
+              }
+        
+@media (max-width: 470px){
+  /* header section*/ .mobile-navbar-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .proper430{
+    font-size: 12px;
+  }
+  #text-nav{
+    font-size: 15px;
+  }
+                  .logo {
+                      font-size: 16px;
+                    }
+                    #text {
+                      font-size: 15px;
+                    }
+                    .logo a img {
+                      margin: 0px 5px -5px 1px;
+                    }
+                    .carousel{
+                      height: 480px;
+                      width: 430px;
+                    }
+              }
+
+@media (max-width: 430px){
+                  .proper430{
+                    font-size: 11px;
+                  }
+                  .carousel{
+                    left: 2%;
+                    width: 400px;
+                  }
+                  .bgimages{
+                    height: 350px;
+                  }
+                  #smoking,.infosmoke{
+                    height: 1660px;
+  
+                  }
+                  .infodrink,#drinking{
+                    height: 2140px;
+                  }
+                  .infodrugs,#drugs{
+                    height: 2085px;
+                  }
+                  .mobile-navbar-icon {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                  }
+                  .mobile-navbar-btn{
+                    margin-right: 19px;
+                  }
+                  .down1 h2,.down1 h4, .down1 p {
+                    font-size: 11px;
+                }
+                .down2 h4, .down2 p, .down2 p a {
+                  font-size: 11px;
+                }
+                  #text-nav{
+                    font-size: 12px;
+                    margin-left: -30px;
+                  }
+                  .down3 img {
+                    height: 120px;
+                    width: 120px;
+                  }
+                }
+
+@media (max-width: 400px){
+                  .logo a img {
+                      height: 20px;
+                      width: 20px;
+                      margin: 0px 4px -4px -2px;
+                    }
+                    .logo {
+                      font-size: 14px;
+                    }
+                    .mobile-navbar-icon {
+                      width: 2rem;
+                      height: 2rem;
+                    }
+                    .mobile-navbar-btn{
+                      margin-right: 9px;
+                    }
+                    .carousel{
+                      left: 4%;
+                      width: 360px;
+                    }
+                    .down1 h2,.down1 h4, .down1 p {
+                      font-size: 10px;
+                  }
+                  .down2 h4, .down2 p, .down2 p a {
+                    font-size: 10px;
+                  }
+                    #smoking,.infosmoke{
+                      height: 1870px;
+    
+                    }
+                    .infodrink,#drinking{
+                      height: 2640px;
+                      background-image: url('/Images/Backgroundimages2responsive2.jpg');
+
+                    }
+                    .infodrugs,#drugs{
+                      height: 2400px;
+                    }
+          
+                    /* footer */
+                    .down3 img {
+                      height: 100px;
+                      width: 110px;
+                    }
+              }
+
+@media (max-width: 360px){
+                  .logo {
+                      font-size: 13px;
+                    }
+                    #text {
+                      font-size: 14px;
+                    }
+          
+                    /* footer */
+                    .proper430 {
+                      font-size: 10px;
+                    }
+              }
+
+@media screen and (max-width: 350px){
+              
+                  #text{
+                    font-size: 12px;
+                  }
+                }

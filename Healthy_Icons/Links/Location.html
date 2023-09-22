@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/Images/title.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/Location.css" />
+    <title>Healthy Icons: Location</title>
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h4 id="title">Locations of our working areas</h4>
+        <small id="subtitle">Search by location name</small>
+        <input type="text" id="filter" placeholder="Search">
+      </header>
+
+      <ul id="result" class="user-list">
+        <li>
+          <h3>Loading...</h3>
+        </li>
+      </ul>
+    </div>
+    <script>
+
+      
+  
+// Sample location data with latitude, longitude, location name, contact number, and address
+
+
+const locations = [
+  {
+    locationName: "Malviya nagar",
+    latitude: 26.858203440223452,  // Replace with actual latitude
+    longitude: 75.78624231274496, // Replace with actual longitude
+    contactNumber: "8094444322", // Replace with the contact number
+    address: "23 Gali Number 1 Mahavir Nagar, Jaipur, Rajasthan 302018 ·", // Replace with the address
+  },
+  {
+    locationName: "Mansarovar",
+    latitude: 26.877670296230047,  // Replace with actual latitude
+    longitude: 75.75096709999339, // Replace with actual longitude
+    contactNumber: "8875155902", // Replace with the contact number
+    address: "21/71, Bhrigu Path, near Mansarovar Metro Depot, Sector 21, Mansarovar, Jaipur, Rajasthan 302020x ", // Replace with the address
+  },
+  {
+    locationName: "Kanakpura",
+    latitude: 26.937429673860194,  // Replace with actual latitude
+    longitude: 75.72354641945788, // Replace with actual longitude
+    contactNumber: "7891331496", // Replace with the contact number
+    address: "Plot No. 12, Umrav Vihar, Kanakpura Phatak Rd, near Sangh Shakti Road, Jhotwara, Jaipur, Rajasthan 302012", // Replace with the address
+  },
+  {
+    locationName: "Tonk road",
+    latitude: 26.817898068619574,  // Replace with actual latitude
+    longitude: 75.79813234109785, // Replace with actual longitude
+    contactNumber: "9119311466", // Replace with the contact number
+    address: "Shop. No.9, First Floor, Near Gogiya Petrol Pump Under Sanganer Flyover, Tonk Rd, Maruti Nagar, Jaipur, Rajasthan 302029", // Replace with the address
+  },
+  {
+    locationName: "Shastri nagar",
+    latitude: 26.939670881295566, // Replace with actual latitude
+    longitude: 75.80355379698493, // Replace with actual longitude
+    contactNumber: "99504 42840", // Replace with the contact number
+    address: "riddhi tower ,A-284 ,indira verma colony ,pani k tanki ,shastri, Jaipur, Rajasthan 302016", // Replace with the address
+  },
+  {
+    locationName: "Jhotwara",
+    latitude: 26.951653395222518, // Replace with actual latitude
+    longitude:  75.72191771029553, // Replace with actual longitude
+    contactNumber: "9351792004", // Replace with the contact number
+    address: "Bajrang Dwar Main Chouraha,, Kalwad Road, Jhothwara, Jaipur, Rajasthan 302012", // Replace with the address
+  },
+  {
+    locationName: "Vaishali nagar",
+    latitude: 26.903128013432536,  // Replace with actual latitude
+    longitude:  75.73980416290561, // Replace with actual longitude
+    contactNumber: "9327765315", // Replace with the contact number
+    address: "Plot No. 4, Near Akshardham Mandir Chitrakoot, Vaishali Nagar, Jaipur, Rajasthan 302020", // Replace with the address
+  },
+  {
+    locationName: "Hathoj",
+    latitude: 26.95705035245153,  // Replace with actual latitude
+    longitude:  75.68580877113773, // Replace with actual longitude
+    contactNumber: "9414320061", // Replace with the contact number
+    address: "Kalwad Rd, Jhotwara, Hathoj, Rajasthan 302012", // Replace with the address
+  },
+  {
+    locationName: "Pratap nagar",
+    latitude: 26.812686391751004,  // Replace with actual latitude
+    longitude:  75.8209931954545, // Replace with actual longitude
+    contactNumber: "9950442840", // Replace with the contact number
+    address: "Narayana Hospital, 105/101 Sectore 10, Road, near Rose Academy School, Kumbha Marg, Pratap Nagar, Jaipur, Rajasthan 302033", // Replace with the address
+  },
+  {
+    locationName: "Gopalpura",
+    latitude: 26.857573723031887,  // Replace with actual latitude
+    longitude:  75.7870181421037, // Replace with actual longitude
+    contactNumber: "9828155322", // Replace with the contact number
+    address: "Railway Station, 23, Bajrang Vihar Rd, behind Durgapura, Shanti Nagar, Shanthi Nagar, Durgapura, Jaipur, Rajasthan 302018", // Replace with the address
+  },
+  {
+    locationName: "Bhakrota",
+    latitude: 26.87252775168817,  // Replace with actual latitude
+    longitude:  75.6980316649327, // Replace with actual longitude
+    contactNumber: "9785909644", // Replace with the contact number
+    address: "Ajmer Rd, Bhakrota, Jaipur, Rajasthan 302026", // Replace with the address
+  },
+  {
+    locationName: "Benar",
+    latitude: 27.000156627020253,  // Replace with actual latitude
+    longitude: 75.7331797012227, // Replace with actual longitude
+    contactNumber: "9982956509", // Replace with the contact number
+    address: "P.-44, railway station, near, Benar Rd, Puran Vihar Colony, Shankar Vihar Extension, Jamna Puri, Jaipur, Rajasthan 302012", // Replace with the address
+  },
+  {
+    locationName: "Kanota",
+    latitude: 26.870778102454043,  // Replace with actual latitude
+    longitude:  75.95072417343388, // Replace with actual longitude
+    contactNumber: "9313564242", // Replace with the contact number
+    address: "42 Ramdhan Vihar, Sambhariya Road, Kanota Near Gram Panchayat Bhawan Kanota, Agra - Jaipur Rd, Jaipur, Rajasthan 303012", // Replace with the address
+  },
+  // Add more location objects as needed
+];
+// Function to display location, contact, and address data
+function displayLocations(locations) {
+  const locationList = document.getElementById("result");
+  locationList.innerHTML = "";
+
+  if (locations.length === 0) {
+    const noResults = document.createElement("li");
+    noResults.textContent = "No locations found.";
+    locationList.appendChild(noResults);
+  } else {
+    locations.forEach((location) => {
+      const listItem = document.createElement("li");
+      const locationName = document.createElement("h3");
+      locationName.textContent = location.locationName;
+
+      const contactNumber = document.createElement("p");
+      contactNumber.innerHTML = `<strong>Contact:</strong> <a href="tel:${location.contactNumber}">${location.contactNumber}</a>`;
+
+      const mapLink = document.createElement("p");
+      mapLink.innerHTML = `<strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=${location.latitude},${location.longitude}" target="_blank">${location.address}</a>`;
+
+      listItem.appendChild(locationName);
+      listItem.appendChild(contactNumber);
+      listItem.appendChild(mapLink);
+
+      locationList.appendChild(listItem);
+    });
+  }
+}
+
+// Function to filter locations based on input
+function filterLocations() {
+  const searchTerm = filter.value.toLowerCase();
+  const filteredLocations = locations.filter((location) => {
+    return (
+      location.locationName.toLowerCase().includes(searchTerm) ||
+      location.address.toLowerCase().includes(searchTerm)
+    );
+  });
+  displayLocations(filteredLocations);
+}
+
+// Get the filter input element
+const filter = document.getElementById('filter');
+
+// Call the displayLocations function initially to display all locations
+displayLocations(locations);
+
+// Add event listener to the filter input
+filter.addEventListener("input", filterLocations);
+
+
+
+
+// Call the displayLocations function initially to display all locations
+
+    </script>
+  </body>
+</html>

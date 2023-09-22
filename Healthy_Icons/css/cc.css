@@ -1,0 +1,236 @@
+/* =======media queries=========
+====================================== */
+@media screen and (max-width: 1170px){
+    #text{
+     font-size: 18px;
+     }
+   }
+
+   @media (max-width: 1140px){
+    #text {
+        font-size: 22px;
+      }
+      .logo {
+      font-size: 23px;
+      }
+
+}
+
+@media screen and (max-width: 1130px){
+    .logo{
+     font-size: 22px;
+    }
+    }
+
+ @media screen and (max-width: 1115px){   
+        #login {
+          margin-left: 0px;
+        }
+        }
+
+@media (max-width: 1100px){
+            #text{
+                font-size: 20px;
+            }
+            .logo{
+                font-size: 20px;
+             }
+             #login {
+                margin-left: 0px;
+              }
+            }
+
+@media screen and (max-width: 1060px){
+                .logo{
+                  font-size: 18px;
+                 }
+                 .logo a img {
+                  height: 30px;
+                  width: 30px;
+                  margin: -7px 7px -8px -6px;
+                }
+                
+        .options li{
+          margin: 0px 0px 0px 6px;
+          font-size: 14px;
+        }
+        #text{
+          font-size: 16px;
+          }
+              }
+
+@media (max-width: 1030px){
+                #text {
+                    font-size: 20px;
+                  }
+                  .navbar-links {
+                    font-size: 14px;
+                  }
+            }
+
+@media (max-width: 980px){
+                .navbar-links{
+                    color: black;
+                
+                }
+                 .navbar{
+                    width: 100%;
+                    height: 100vh;
+                    background: linear-gradient(to bottom, rgb(251, 235, 213),#f0bdf2);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateX(100%);
+                    transition: all 0.5s;
+                    opacity: 0;
+                    visibility: hidden;
+                 }
+                 .navbar-lists{
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px
+                 }
+                 .mobile-navbar-btn{
+                    display: block;
+                    z-index: 999;
+                 }   
+                 .active .navbar{
+                    transform: translateX(0); 
+                    opacity: 1;
+                    visibility: visible;
+                 }
+                 .active .mobile-navbar-btn
+                 .mobile-navbar-icon[name="reorder-three-outline"]{
+                    display: none;
+                 }
+                 .active .mobile-navbar-btn
+                 .mobile-navbar-icon[name="close-outline"]{
+                    display: block;
+                 }
+                 #login {
+                    margin-left: 0px;
+                    color: black;
+                    font-weight: 500;
+                  }
+                }
+
+@media (max-width: 800px){
+          
+                    /* --footer section  -- */
+                    .down3 img {
+                      height: 183px;
+                      width: 206px;
+                    }
+                    .down1 img{
+                      width: 40%;
+                      height: 40%;
+                    }
+                  }
+
+@media (max-width: 660px){
+                    .logo{
+                       font-size: 20px;
+                    }
+                    #text{
+                        font-size: 20px;
+                    }
+          
+                    /* footer-section */
+                    .down1 h2 {
+                      font-size: 12px;
+                    }
+                    .down1 h4{
+                        font-size: 12px;
+                    }
+                    .down1 p{
+                        font-size: 12px;   
+                    }
+                    
+                } 
+
+@media (max-width: 500px){
+                    .logo a img {
+                        height: 25px;
+                        width: 25px;
+                        margin: 5px 5px -5px 1px;
+                      }
+            
+                      /* ---footer--section--- */
+                      .bottom {
+                        height: 200px;
+                      }
+                      .down3 img {
+                        height: 140px;
+                        width: 140px;
+                      }
+                      .down1 img {
+                        width: 20%;
+                      }
+                }
+          
+@media (max-width: 470px){
+                    .logo {
+                        font-size: 16px;
+                      }
+                      #text {
+                        font-size: 15px;
+                      }
+                      .logo a img {
+                        margin: 0px 5px -5px 1px;
+                      }
+                }
+
+@media (max-width: 430px){
+                    .proper430{
+                      font-size: 11px;
+                    }
+                    .down3 img {
+                      height: 120px;
+                      width: 120px;
+                    }
+                  }
+
+ @media (max-width: 400px){
+                    .logo a img {
+                        height: 20px;
+                        width: 20px;
+                        margin: 0px 4px -4px -2px;
+                      }
+                      .logo {
+                        font-size: 14px;
+                      }
+                      .mobile-navbar-icon {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                      }
+            
+                      /* footer */
+                      .down3 img {
+                        height: 100px;
+                        width: 100px;
+                      }
+                }
+
+@media (max-width: 360px){
+                    .logo {
+                        font-size: 13px;
+                      }
+                      #text {
+                        font-size: 14px;
+                      }
+            
+                      /* footer */
+                      .proper430 {
+                        font-size: 10px;
+                      }
+                }
+
+@media screen and (max-width: 350px){
+                
+                    #text{
+                      font-size: 12px;
+                    }
+                  }
